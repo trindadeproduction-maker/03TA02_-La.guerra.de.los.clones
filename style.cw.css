@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.top{
+    float: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex: 1;
+}
+.topr{
+    float: right;    
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex: 1;
+    padding-top: 10%;
+}
+.topr1{
+    float: right;    
+}
+.topr2{
+    float: right;    
+}
+.container {
+    text-align: center;
+}
+
+.logo {
+    font-size: 48px;
+    font-weight: bold;
+    color: #4285f4; /* Color de Google */
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.search-box {
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    transition: border 0.3s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.search-box:focus {
+    border-color: #4285f4; /* Color de enfoque */
+    outline: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4285f4;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #357ae8; /* Color al pasar el ratón */
+}
+.fl{
+    margin: 5%;
+    align-items: center;
+    justify-content: center;
+}
