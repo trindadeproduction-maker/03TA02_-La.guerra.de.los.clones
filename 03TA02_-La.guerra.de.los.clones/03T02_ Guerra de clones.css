@@ -1,0 +1,230 @@
+/* Variables para mantener el orden */
+:root {
+    --google-white: #e8eaed;
+    --border-gray: #5f6368; /* Borde más oscuro para el buscador */
+    --text-gray: #9aa0a6;
+    --bg-dark: #202124;    /* Fondo oficial Google Dark */
+    --input-bg: #202124;
+    --btn-bg: #303134;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #232524;
+    color: var(--google-white);
+}
+
+/* Header: Distribución de los enlaces superiores */
+#header {
+    display: flex;
+    justify-content: space-between; /* Separa los grupos a los extremos */
+    padding: 15px 20px;
+}
+
+.top, .topr {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+/* Contenedor del icono */
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 4px); /* 3 columnas de 4px cada una */
+    grid-template-rows: repeat(3, 4px);    /* 3 filas de 4px cada una */
+    gap: 2px;                              /* Espacio entre los puntos */
+    padding: 10px;                         /* Área de clic más grande */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-left: 10px;
+}
+
+.apps-grid span {
+    width: 4px;
+    height: 4px;
+    background-color: var(--google-white);
+    border-radius: 50%;                    /* Puntos redondos */
+}
+
+#header p {
+    font-size: 13px;
+    color: var(--google-white);
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+#header p:hover {
+    text-decoration: underline;
+}
+
+/* Main: Centrado total */
+.main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.letter-container {
+    display: flex;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    letter-spacing: -2px;
+}
+.logo { color: var(--google-white); }
+
+.buscador {
+    width: 90%;
+    max-width: 584px;
+}
+/* Contenedor que agrupa input e iconos */
+.search-input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+/* Ajuste del input para dejar espacio a los iconos */
+.search-box {
+    width: 100%;
+    padding: 12px 120px 12px 45px; /* Ajustado para los 3 iconos de la derecha */
+    font-size: 16px;
+    background-color: var(--border-gray); /* Para que se vea el fondo del body */
+    color: var(--google-white);
+    border: 1px solid var(--border-gray);
+    border-radius: 24px;
+    outline: none;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+/* Icono de + a la izquierda */
+.icon-search {
+    position: absolute;
+    left: 15px;
+    color: var(--google-white);
+    font-size: 20px !important;
+}
+
+/* Contenedor de iconos a la derecha (Voz, Imagen, Subir) */
+.search-icons-right {
+    position: absolute;
+    right: 15px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.search-icons-right span {
+    cursor: pointer;
+    color: #5f6368;
+    transition: transform 0.1s;
+    color: var(--text-gray);
+    font-size: 20px !important;
+}
+
+.search-icons-right span:hover {
+    color: var(--google-white);
+    transform: scale(1.1);
+}
+
+/* Efecto hover en todo el contenedor */
+.search-input-container:hover .search-box,.search-box:focus {
+    background-color: #424646;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.4);
+    border-color: transparent;
+}
+
+/* Botones */
+.buttons {
+    margin-bottom: 25px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.btn {
+    background-color: #3b3c3c;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 36px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border: 1px solid #5f6368;
+}
+
+/* Idiomas */
+.fl {
+    font-size: 13px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.fl a {
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.fl .f1 { color: var(--text-gray); cursor: default; }
+.fl a:not(.f1) { color: #8ab4f8; }
+
+/* Footer */
+footer {
+    background-color: #171717;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-top: 1px solid #3c4043;
+    flex-wrap: wrap;
+}
+.location {
+    color: #ffffff;
+    background-color: #171717;
+}
+footer p {
+    color: var(--text-gray);
+    font-size: 14px;
+}
+
+footer nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+    color: var(--text-gray);
+}
+
+/* Responsive básico */
+@media (max-width: 600px) {
+    #header, footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
